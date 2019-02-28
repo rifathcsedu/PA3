@@ -7,7 +7,7 @@ import boto3
 import thread
 import socket
 import random
-def Send(region,url):
+def Send(region,url,ClientID):
 
         sqs = boto3.client('sqs',region_name=region)
         f=open("Data.txt","r")
@@ -17,9 +17,9 @@ def Send(region,url):
             QueueUrl=queue_url,
             DelaySeconds=0,
             MessageAttributes={
-                'MessageType': {
-                    'DataType': 'String',
-                    'StringValue': 'LOG'
+                'Client': {
+                    'DataType': 'Number',
+                    'StringValue': ClientID
                 },
             },
             MessageBody=(
@@ -28,4 +28,5 @@ def Send(region,url):
         )
 url='https://sqs.us-east-1.amazonaws.com/621120329648/ServerQueue'
 region='us-east-1'
-Send(region,url)
+
+Send(region,url,sys.argv[1])
