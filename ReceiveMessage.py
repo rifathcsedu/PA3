@@ -38,8 +38,9 @@ def Receive(region,url,id):
                             QueueUrl=queue_url,
                             ReceiptHandle=receipt_handle
                         )
-                    else:
-                    	break
+                        break
+                else:
+                	break
                         
             except ValueError as e:
                 print("Value error")
