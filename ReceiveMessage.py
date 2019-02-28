@@ -7,7 +7,7 @@ import boto3
 import thread
 import socket
 import random
-def Receive(region,url):
+def Receive(region,url,id):
         while(True):
             try:
                 sqs = boto3.client('sqs',region_name=region)        
@@ -29,11 +29,15 @@ def Receive(region,url):
                     #print response        
                     message = response['Messages'][0]
                     receipt_handle = message['ReceiptHandle']
-                    print(message) 
-                    sqs.delete_message(
+                    client=message['MessageAttributes']['Client']['StringValue']
+                    if(str(client)==id):
+                    	sqs.delete_message(
                             QueueUrl=queue_url,
                             ReceiptHandle=receipt_handle
                         )
+                    else:
+                    	break
+                       
                 else:
                 	  
                     break
@@ -43,4 +47,4 @@ def Receive(region,url):
 
 url='https://sqs.us-east-1.amazonaws.com/621120329648/ServerQueue'
 region='us-east-1'                
-Receive(region,url)
+Receive(region,url,sys.argv[1])
