@@ -7,6 +7,7 @@ import boto3
 import thread
 import socket
 import random
+import sys
 def Receive(region,url,id):
         while(True):
             try:

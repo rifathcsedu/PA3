@@ -7,6 +7,7 @@ import boto3
 import thread
 import socket
 import random
+import sys
 def Send(region,url,ClientID):
 
         sqs = boto3.client('sqs',region_name=region)
