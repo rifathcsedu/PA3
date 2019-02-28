@@ -28,7 +28,8 @@ def Receive(region,url):
                 if(response['ResponseMetadata']['HTTPHeaders']['content-length']!='240'):
                     #print response        
                     message = response['Messages'][0]
-                    receipt_handle = message['ReceiptHandle']    
+                    receipt_handle = message['ReceiptHandle']
+                    print(message) 
                     sqs.delete_message(
                             QueueUrl=queue_url,
                             ReceiptHandle=receipt_handle

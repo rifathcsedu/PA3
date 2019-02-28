@@ -8,7 +8,10 @@ import thread
 import socket
 import random
 def Send(region,url):
-        sqs = boto3.client('sqs',region_name=region)        
+
+        sqs = boto3.client('sqs',region_name=region)
+        f=open("Data.txt","r")
+        ST=f.read()      
         queue_url = url
         response = sqs.send_message(
             QueueUrl=queue_url,
@@ -20,7 +23,7 @@ def Send(region,url):
                 },
             },
             MessageBody=(
-                'ALUBALU'
+                ST
     )
         )
 url='https://sqs.us-east-1.amazonaws.com/621120329648/ServerQueue'
