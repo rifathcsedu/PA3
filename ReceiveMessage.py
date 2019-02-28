@@ -31,6 +31,8 @@ def Receive(region,url,id):
                     message = response['Messages'][0]
                     receipt_handle = message['ReceiptHandle']
                     client=message['MessageAttributes']['Client']['StringValue']
+                    print(message)
+                    print(client)
                     if(str(client)==id):
                     	sqs.delete_message(
                             QueueUrl=queue_url,
@@ -38,10 +40,6 @@ def Receive(region,url,id):
                         )
                     else:
                     	break
-                       
-                else:
-                	  
-                    break
                         
             except ValueError as e:
                 print("Value error")
