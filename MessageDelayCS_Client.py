@@ -11,7 +11,7 @@ timelist=[]
 for i in range(NTest):
     start=time.time()
     print(start)
-    cmd="python SendMessage.py"
+    cmd="python SendMessage.py S"
     Popen(cmd, shell=True)
     time.sleep(10)    
     timelist.append((start))

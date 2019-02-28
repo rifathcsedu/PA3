@@ -12,7 +12,7 @@ for i in range(NTest):
 	 #time.sleep(10)  
     start=time.time()
     print(start)
-    cmd="python ReceiveMessage.py"
+    cmd="python ReceiveMessage.py S"
     Popen(cmd, shell=True)
       
     timelist.append((start))

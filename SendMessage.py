@@ -18,7 +18,7 @@ def Send(region,url,ClientID):
             DelaySeconds=0,
             MessageAttributes={
                 'Client': {
-                    'DataType': 'Number',
+                    'DataType': 'String',
                     'StringValue': ClientID
                 },
             },
