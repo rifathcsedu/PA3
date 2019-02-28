@@ -13,7 +13,8 @@ for i in range(NTest):
     start=time.time()
     print(start)
     cmd="python ReceiveMessage.py S"
-    Popen(cmd, shell=True)
+    result=subprocess.check_output(cmd, shell=True)
+    print(result)
       
     timelist.append((start))
     

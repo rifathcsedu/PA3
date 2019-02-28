@@ -12,7 +12,8 @@ for i in range(NTest):
     start=time.time()
     print(start)
     cmd="python SendMessage.py S"
-    Popen(cmd, shell=True)
+    result=subprocess.check_output(cmd, shell=True)
+    print(result)
     time.sleep(10)    
     timelist.append((start))
     
