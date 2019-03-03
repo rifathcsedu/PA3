@@ -39,8 +39,10 @@ def Receive(region,url,id):
                             ReceiptHandle=receipt_handle
                         )
                         break
-                else:
-                	break
+		    else:
+                        break
+               
+                	#break
                         
             except ValueError as e:
                 print("Value error")
