@@ -27,6 +27,7 @@ def Send(region,url,ClientID):
                 ST
     )
         )
+        print(response)
 url='https://sqs.us-east-1.amazonaws.com/621120329648/ServerQueue'
 region='us-east-1'
 
