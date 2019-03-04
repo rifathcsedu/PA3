@@ -30,7 +30,7 @@ for i in range(NTest):
     		break
     	start=datetime.datetime.utcnow().timestamp()
     	j+=1
-    #time.sleep(10)
-    #timelist.append((start))
+    time.sleep(10)
+    timelist.append((start))
 print(j)
 print(timelist)
