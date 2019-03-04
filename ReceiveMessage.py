@@ -31,9 +31,10 @@ def Receive(region,url,id):
                     message = response['Messages'][0]
                     receipt_handle = message['ReceiptHandle']
                     client=message['MessageAttributes']['Client']['StringValue']
-                    print(message)
-                    print(client)
+                    #print(message)
+                    #print(client)
                     if(str(client)==id):
+                    	print(message)
                     	sqs.delete_message(
                             QueueUrl=queue_url,
                             ReceiptHandle=receipt_handle

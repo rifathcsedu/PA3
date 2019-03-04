@@ -9,7 +9,7 @@ import time
 import datetime;
 import threading
 from subprocess import Popen
-NTest=10
+NTest=1
 timelist=[]
 NODE=sys.argv[1]
 
