@@ -9,7 +9,7 @@ import time
 import threading
 from subprocess import Popen
 import datetime
-NTest=1
+NTest=10
 timelist=[]
 Trans=sys.argv[1]
 time.sleep(3)
@@ -29,6 +29,7 @@ for i in range(NTest):
     	if(str(result)=="124"):
     		break
     	start=datetime.datetime.utcnow().timestamp()
+	print(start)
     	j+=1
     time.sleep(10)
     timelist.append((start))
