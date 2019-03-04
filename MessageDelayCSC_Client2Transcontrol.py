@@ -12,6 +12,7 @@ import datetime
 NTest=1
 timelist=[]
 Trans=sys.argv[1]
+time.sleep(3)
 for i in range(NTest):
     #start=datetime.datetime.utcnow().timestamp()
     #print(start)
