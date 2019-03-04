@@ -23,7 +23,6 @@ for i in range(NTest):
     	i+=1
     start=datetime.datetime.utcnow().timestamp()
     print(start)
-    #time.sleep(5)
     timelist.append((start))
     
 print(timelist)
