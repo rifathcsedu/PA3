@@ -18,9 +18,9 @@ for i in range(NTest):
 	 i=0
 	 while(i<int(NODE)):
 		cmd="python ReceiveMessage.py S"
-    	result=subprocess.check_output(cmd, shell=True)
-    	print(result)
-    	i+=1
+		result=subprocess.check_output(cmd, shell=True)
+		print(result)
+		i+=1
     start=datetime.datetime.utcnow().timestamp()
     print(start)
     timelist.append((start))

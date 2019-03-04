@@ -16,8 +16,7 @@ NODE=sys.argv[1]
 for i in range(NTest):
 	 time.sleep(3)
 	 start=datetime.datetime.utcnow().timestamp()
-    #start=calendar.timegm(start.utctimetuple())
-    print(start)
+	 print(start)
     i=0
     while(i<int(NODE)):
     	cmd="python SendMessage.py S &"
