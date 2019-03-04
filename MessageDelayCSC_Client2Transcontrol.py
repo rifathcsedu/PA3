@@ -29,7 +29,7 @@ for i in range(NTest):
     	if(str(result)=="124"):
     		break
     	start=datetime.datetime.utcnow().timestamp()
-	print(start)
+    	print(start)
     	j+=1
     time.sleep(10)
     timelist.append((start))
