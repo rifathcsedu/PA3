@@ -14,9 +14,9 @@ timelist=[]
 NODE=sys.argv[1]
 
 for i in range(NTest):
-	 time.sleep(3)
-	 i=0
-	 while(i<int(NODE)):
+	time.sleep(3)
+	i=0
+	while(i<int(NODE)):
 		cmd="python ReceiveMessage.py S"
 		result=subprocess.check_output(cmd, shell=True)
 		print(result)
