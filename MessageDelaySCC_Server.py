@@ -21,8 +21,8 @@ for i in range(NTest):
 		result=subprocess.check_output(cmd, shell=True)
 		print(result)
 		i+=1
-    start=datetime.datetime.utcnow().timestamp()
-    print(start)
-    timelist.append((start))
+	start=datetime.datetime.utcnow().timestamp()
+	print(start)
+	timelist.append((start))
     
 print(timelist)
