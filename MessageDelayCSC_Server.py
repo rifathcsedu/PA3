@@ -12,7 +12,8 @@ from subprocess import Popen
 NTest=10
 timelist=[]
 for i in range(NTest):
-	 #time.sleep(10)  
+	 #time.sleep(10)
+    time.sleep(3)  
     start=datetime.datetime.utcnow().timestamp()
     #start=calendar.timegm(start.utctimetuple())
     print(start)

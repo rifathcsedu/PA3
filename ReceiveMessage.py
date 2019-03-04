@@ -39,8 +39,9 @@ def Receive(region,url,id):
                             ReceiptHandle=receipt_handle
                         )
                         break
-		    else:
-                        break
+#		else:
+#		     break
+                        #break
                
                 	#break
                         
