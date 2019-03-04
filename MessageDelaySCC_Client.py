@@ -12,17 +12,19 @@ import datetime
 NTest=10
 timelist=[]
 NODE=sys.argv[1]
-time.sleep(3)
+
 for i in range(NTest):
+	 time.sleep(3)
     start=datetime.datetime.utcnow().timestamp()
     #start=calendar.timegm(start.utctimetuple())
     print(start)
+    i=0
     while(i<int(NODE)):
     	cmd="python SendMessage.py S &"
     	result=subprocess.check_output(cmd, shell=True)
     	print(result)
     	i+=1
-    #time.sleep(10)
+    time.sleep(3)
     timelist.append((start))
     
 print(timelist)
